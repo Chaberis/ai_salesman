@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-from src.rag_system import RAGSystem
+from rag_system import RAGSystem
 
 load_dotenv()
 
@@ -37,7 +37,6 @@ SYSTEM_PROMPT = """
 - Модели автомобилей могут быть написаны немного по-разному, например "Golf 6", "Гольф 6", "Гольф VI". Учитывай это при поиске. Аналогично "Пассат Б6", "Passat B6".
 """
 
-# Определение доступных функций для GPT
 AVAILABLE_FUNCTIONS = [
     {
         "type": "function",
@@ -178,10 +177,10 @@ class SalesBot:
 
 if __name__ == "__main__":
     bot = SalesBot()
-    bot.process_message("Привет") # Для теста простого приветствия
+    bot.process_message("Привет") 
     bot.process_message("У вас есть моторчик омывателя для Golf 6?")
     bot.process_message("Сколько будет стоить задний фонарь на Пассат Б6?")
-    bot.process_message("Это оригинал или аналог?") # Этот вопрос должен быть в контексте предыдущего
+    bot.process_message("Это оригинал или аналог?") 
     
     # Интерактивный режим для теста
     print("AI Sales Bot запущен. Введите 'выход' для завершения.")
