@@ -174,18 +174,13 @@ class SalesBot:
 
         print(f"🤖 ИИ-продавец: {ai_response_text}")
         return ai_response_text
-
-if __name__ == "__main__":
-    bot = SalesBot()
-    bot.process_message("Привет") 
-    bot.process_message("У вас есть моторчик омывателя для Golf 6?")
-    bot.process_message("Сколько будет стоить задний фонарь на Пассат Б6?")
-    bot.process_message("Это оригинал или аналог?") 
-    
-    # Интерактивный режим для теста
+# Интерактивный режим для теста
+"""
+if __name__ == "__main__":    
     print("AI Sales Bot запущен. Введите 'выход' для завершения.")
     while True:
         user_input = input("Вы: ")
         if user_input.lower() == 'выход':
             break
         bot.process_message(user_input)
+"""
